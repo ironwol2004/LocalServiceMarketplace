@@ -1,5 +1,12 @@
 /* custom style sheet for the whole website*/
-h1{
-    text-align: right;
-    color:aqua;
+form input,textarea{
+    width: 100%;
+    padding: 5px;
+}
+form{
+    margin: 50px;
+}
+a{
+    color: black;
+    text-decoration: none;
 }

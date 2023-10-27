@@ -1,4 +1,15 @@
 <!-- list of service providers of a particular category I just want a div with a dummy entry for how to represent the full list (only contain city name of provider's location,clickable name, and a brief decription basically first hundered or fifty characters of description then three ... ) -->
 <%-include("layouts/header")%>
-<h1>Different Service Providers of a particular category</h1>
+<h1><%=c%> Category Providers List</h1>
+<hr>
+<ul>
+<%providers.forEach((p)=>{%>
+    <li><div>
+        <a href="/providers/<%=p._id%>"><h2><%=p.name%></h2></a>
+        <h3><%=p.city%></h3>
+        <p><%=p.description.substring(0,100)%>...</p>
+    </div>
+    <hr>
+   <%});%></li>
+</ul>
 <%-include("layouts/footer")%>

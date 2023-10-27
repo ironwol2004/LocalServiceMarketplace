@@ -1,5 +1,9 @@
 <!-- categories page made with a grid of images reltated to category (2xno of rows) covering only 8-10 categories will decide name of categories afterwards -->
 <%-include("layouts/header")%>
 <h1>Catergories</h1>
-
+<ul>
+<%providers.forEach((p)=>{%>
+ <li><a href="/categories/<%=p.category%>"><h2><%=p.category%></h2></a></li>
+<%});%>
+</ul>
 <%-include("layouts/footer")%>

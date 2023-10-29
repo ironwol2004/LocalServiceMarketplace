@@ -1,20 +1,20 @@
-const mongoose=require("mongoose");
+//const mongoose=require("mongoose");
 const express=require("express");
 const bodyParser=require("body-parser");
 const _=require("lodash");
 const ejs=require("ejs");
 const app=express();
 app.use(bodyParser.urlencoded({extended:true}));
-mongoose.connect("mongodb://localhost:27017/lsm",{useNewUrlParser:true});
-const serviceProviderSchema=new mongoose.Schema({
-    name:String,
-    pno:Number,
-    email:String,
-    category:String,
-    city:String,
-    description:String
-});
-const Provider= mongoose.model("Provider",serviceProviderSchema);
+//mongoose.connect("mongodb://localhost:27017/lsm",{useNewUrlParser:true});
+// const serviceProviderSchema=new mongoose.Schema({
+//     name:String,
+//     pno:Number,
+//     email:String,
+//     category:String,
+//     city:String,
+//     description:String
+// });
+// const Provider= mongoose.model("Provider",serviceProviderSchema);
 app.use(express.static(__dirname+"/public"));
 app.set('view engine', 'ejs');
 app.get("/",(req,res)=>{

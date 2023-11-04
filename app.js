@@ -1,11 +1,11 @@
-//const mongoose=require("mongoose");
+// const mongoose=require("mongoose");
 const express=require("express");
 const bodyParser=require("body-parser");
 const _=require("lodash");
 const ejs=require("ejs");
 const app=express();
 app.use(bodyParser.urlencoded({extended:true}));
-//mongoose.connect("mongodb://localhost:27017/lsm",{useNewUrlParser:true});
+// mongoose.connect("mongodb://localhost:27017/lsm",{useNewUrlParser:true});
 // const serviceProviderSchema=new mongoose.Schema({
 //     name:String,
 //     pno:Number,
@@ -67,3 +67,4 @@ app.get("/providers/:id",(req,res)=>{
 app.listen(3000,()=>{
     console.log("server started");
 });
+

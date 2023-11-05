@@ -1,20 +1,33 @@
 <!-- here a form is needed for provider to fill inputs required will decided afterwards -->
 <%-include("layouts/header")%>
-<h1>Form for Service Providers</h1>
+<div class="about">
+    <header>
+        <h1>Service Request Form</h1>
+    </header>
+</div>
 <form method="post" action="/provide_service">
-    <label for="name">Name</label>
-    <input required name="name" type="text">
-    <label for="pno">Whatsapp Contact No.</label>
-    <input required name="pno" type="number">
-    <label for="email">Email</label>
-    <input required name="email" type="email">
-    <label for="category">Specialization Category</label>
-    <input required name="category" type="text">
-    <label for="city">City where you can provide Doorstep Services</label>
-    <input required name="city" type="text">
-    <label for="description">Brief Description of past work</label>
-    <textarea required name="description" rows="5"></textarea>
-    <button type="submit">Submit</button>
-    <button type="reset">Reset</button>
+<div class="container">
+    <div class="row">  
+        <div class="col">
+            <label for="name" >Name</label>
+            <input class="form-control" required name="name" type="text"><br>
+            <label for="pno">Whatsapp Contact No.</label>
+            <input class="form-control" required name="pno" type="number"><br>
+            <label for="email">Email</label>
+            <input class="form-control" required name="email" type="email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small><br><br>
+            <label for="category">Specialization Category</label>
+            <input class="form-control" required name="category" type="text"><br>
+            <label for="city">City where you can provide Doorstep Services</label>
+            <input class="form-control" required name="city" type="text"><br>
+            <label for="description">Brief Description of past work</label>
+            <textarea class="form-control" required name="description" rows="4"></textarea>
+            <br>
+            <button type="submit" id="btn" class="btn btn-dark">Submit</button>
+            <button type="button" id="btn" class="btn btn-light">Reset</button>
+            
+        </div>
+    </div>
+</div>     
 </form>
 <%-include("layouts/footer")%>

@@ -5,7 +5,7 @@ const _=require("lodash");
 const ejs=require("ejs");
 const app=express();
 app.use(bodyParser.urlencoded({extended:true}));
-mongoose.connect("mongodb+srv://admin-ironwol:IronWol2004@ironwol.znds0nw.mongodb.net/lsm",{useNewUrlParser:true});
+mongoose.connect("",{useNewUrlParser:true});
 const serviceProviderSchema=new mongoose.Schema({
     name:String,
     pno:Number,
